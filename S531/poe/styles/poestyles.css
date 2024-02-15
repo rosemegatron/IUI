@@ -11,8 +11,8 @@ color:rgb(214, 91, 142)
 p { /* background-image: url("../images/heart.jpg"); /* The images will appear now */
   background-image: url("../images/eye2.png");
   border: 3px solid rgb(199, 14, 100);
-    padding: 30px;
-    font-size:large
+    padding: 20px;
+    font-size:x-large
   }
 
 p
