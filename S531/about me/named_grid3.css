@@ -1,0 +1,130 @@
+        img		{ 
+			max-width: 100%;
+			float: left; /* YOU CAN FLOAT AN ELEMENT WITHIN A GRID AREA */
+		}
+		
+		
+		header {
+            border-radius: 25px;
+            grid-area: header;
+            background-color: rgb(160, 21, 247);
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin: 2px
+        }
+
+        nav {
+            border-radius: 25px;
+            grid-area: nav;
+            background-color: rgb(240, 182, 232);
+            margin: 2px;
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main {
+            border-radius: 25px;
+            grid-area: main;
+            background-color: rgb(102, 45, 246);
+            margin: 2px;
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+p {
+    border: 3px solid rgb(240, 69, 152);
+    padding: 25px;
+    border-radius: 25px;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:center
+}
+        aside {
+            border-radius: 25px;
+            grid-area: aside;
+            background-color: rgb(240, 182, 232);
+            margin: 2px;
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        footer {
+            border-radius: 25px;
+            text-align: center;
+            grid-area: footer;
+            background-color: rgb(114, 3, 103);
+            margin: 2px;
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'header header header header header aside'
+                'nav nav main main main aside'
+                'nav nav main main main aside'
+                'nav nav main main main aside'
+				'footer footer footer footer footer footer';
+            grid-gap: .5em;
+            padding: .5em;
+			
+			max-width: 62em; /* GIVE CONTAINER A WIDTH AND MARGINS IF YOU DO NOT WANT FULL SCREEN */
+			margin: auto;
+        }
+
+
+        ul li {
+            list-style-type: circle;
+        }
+
+
+        /*FIRST BREAK POINT === tablet */
+        @media only screen and (max-width : 900px) {
+            body {
+                background: rgba(48, 187, 2, 0.889);
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                                        'header header header header header header'
+					'nav nav nav nav nav nav'
+                    'main main main main aside aside'
+                    'footer footer footer footer footer footer';
+                grid-gap: .5em;
+                padding: .5em;
+            }
+
+            ul li {
+                list-style-type: circle;;
+            }
+
+        }
+
+        /*SECOND BREAK POINT === mobile */
+        @media only screen and (max-width : 600px) {
+
+            body {
+                background: rgb(247, 97, 207);
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                    'nav nav nav nav nav nav'
+                    'header header header header header header'
+                    'main main main main main main'
+                    'aside aside aside aside aside aside'
+                    'footer footer footer footer footer footer';
+                grid-gap: .5em;
+                padding: .5em;
+            }
+
+            ul li {
+                list-style-type: circle;
+            }
+			
+			/*img {
+				display: none; /* AND YOU CAN MAKE THINGS DISAPPEAR WHEN NOT NEEDED */
+            }
